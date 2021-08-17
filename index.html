@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Muli:400" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#3a3f3f">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#3a3f3f">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3a3f3f">
+
+</head>
+
+<body>
+
+    <div id="test-div"></div>
+
+    <div id="header">
+        <div id="name">
+            Michael Brimo
+        </div>
+        <div id="subname">
+            Software Engineering Student - Sydney, Australia
+        </div>
+
+        <div id="pointer">
+            Learn more about me <br>
+            <i id="arrow"></i>
+        </div>
+    </div>
+
+
+    <div id="skills">
+        <h1>About me</h1>
+        I'm currently studying a Bachelor of Information Technology, majoring in software at Macquarie University.
+        <br>Below are some of my key skills I've developed within and outside of my studies.<br>
+        <br>
+        <div class="skill">
+            <img src="images/ic_code_black_48dp_2x.png"><br>
+            <b>Web</b><br>
+            I design websites with HTML, CSS, and Javascript. I'm able to make something out of nothing, or create
+            something new from old. I focus on intuitive design and interaction, because who needs more guesswork?
+        </div>
+        <div class="skill">
+            <img src="images/ic_devices_black_48dp_2x.png"><br>
+            <b>Application</b><br>
+            I primarily code in Java. If a project is better suited for another language, I code in that. There isn't a
+            problem I won't try and solve, no matter how foreign the territory.<br><br>
+        </div>
+        <div class="skill">
+            <img src="images/ic_people_outline_black_48dp_2x.png"><br>
+            <b>Collaboration</b><br>
+            The best ideas are always created when all ideas are heard and made into something specific, achievable and
+            exciting. If there is no one to bounce off, there is always research, research and more research.
+        </div><br><br>
+    </div>
+
+    <div id="backing">
+        <div id="container">
+            <div id="projects">
+                <div class="project_tile" id="sealadder" onclick="resize_load_content(this.id)">
+                    <div class="overlay">
+                        <div class="text">Sealadder Internship</div>
+                    </div>
+                </div><div class="project_tile" id="arcade" onclick="resize_load_content(this.id)">
+                    <div class="overlay">
+                        <div class="text">Arcade Build</div>
+                    </div>
+                </div>
+                <div class="project_tile" id="youtube" onclick="resize_load_content(this.id)">
+                    <div class="overlay">
+                        <div class="text">32Builds on YouTube</div>
+                    </div>
+                </div><div class="project_tile" id="datsun" onclick="resize_load_content(this.id)">
+                    <div class="overlay">
+                        <div class="text">The Datsun 1200</div>
+                    </div>
+                </div>
+                <div class="project_tile" id="website" onclick="resize_load_content(this.id)">
+                    <div class="overlay">
+                        <div class="text">My Website</div>
+                    </div>
+                </div><div class="project_tile" id="sufour" onclick="resize_load_content(this.id)">
+                    <div class="overlay">
+                        <div class="text">The CB400 Cafe Racer</div>
+                    </div>
+                </div>
+                <div class="project_tile" id="dsx" onclick="resize_load_content(this.id)">
+                    <div class="overlay">
+                        <div class="text">University DSX Project</div>
+                    </div>
+                </div><div class="project_tile" id="education" onclick="resize_load_content(this.id)">
+                    <div class="overlay">
+                        <div class="text">Education and History</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="contact">
+        <form action="mailto:m.brims93@gmail.com?subject=Hi, from your website!" method="post" enctype="text/plain">
+            <h1>Get in touch!</h1>
+            <input type="text" name="name" value="" maxlength="100" placeholder="Your Name" />
+            <input type="text" name="email" value="" maxlength="100" placeholder="Your Email"/><br>
+            <img class="profilepicture" src="images/profileimage.PNG">
+            <textarea id="email-body" rows="5" cols="20" name="comments" placeholder="Tell me something :)"></textarea> <br>
+            <input id="email-button" type="submit" value="Submit" onclick="changeValue(this)"/>
+        </form>
+    </div>
+
+    <div id="footer">
+        <div id="sicon_container">
+            <a href="https://www.facebook.com/michaelbrims"><img class="sicon" src="images/facebook-box.png"></a>
+            <a href="https://twitter.com/Mhabs93?lang=en"><img class="sicon" src="images/twitter-box.png"></a>
+            <a href="https://www.linkedin.com/in/michael-brimo-a27008a7/"><img class="sicon"
+                    src="images/linkedin-box.png"></a>
+            <a href="https://github.com/Mykib"><img class="sicon" src="images/github-box.png"></a>
+        </div>
+        <p>Design and code by Michael Brimo &#169;2020</p>
+    </div>
+
+
+    <div id="button_float">
+        <center>menu</center>
+    </div>
+
+    <div class="menu_button" id="button_1">
+        <img class="close_on_click" src="images/ic_arrow_upward_black_48dp.png">
+        <div class="button_text" id="button_text_1"> Top </div>
+        <div class="button_text_bottom" id="button_text_1"> Top </div>
+    </div>
+    <div class="menu_button" id="button_2">
+        <img class="close_on_click" src="images/ic_apps_black_48dp.png">
+        <div class="button_text" id="button_text_2"> Skills </div>
+        <div class="button_text_bottom" id="button_text_2"> Skills </div>
+    </div>
+    <div class="menu_button" id="button_3">
+        <img class="close_on_click" src="images/ic_business_center_black_48dp.png">
+        <div class="button_text" id="button_text_3"> Projects </div>
+        <div class="button_text_bottom" id="button_text_3"> Projects </div>
+    </div>
+    <div class="menu_button" id="button_4">
+        <img class="close_on_click" src="images/ic_call_black_48dp.png">
+        <div class="button_text" id="button_text_4"> Contact </div>
+        <div class="button_text_bottom" id="button_text_4"> Contact </div>
+    </div>
+    <div id="project_showcase_window" onclick="close_content()">
+    </div>
+    <div id="close-button" onclick="close_content()">&#10006;</div>
+    <div id="dim"></div>
+</body>
